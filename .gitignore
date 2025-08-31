@@ -21,7 +21,10 @@ logs
 # Local env files
 .env
 .env.*
-!.env.example
+!.env.development
 
 # VSC
 .history
+
+ # Fonts
+.data

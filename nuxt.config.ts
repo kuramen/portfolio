@@ -3,27 +3,29 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@nuxt/image',
-    '@nuxt/ui-pro',
+    '@nuxt/icon',
     '@nuxt/content',
     '@vueuse/nuxt',
-    'nuxt-og-image',
-    'motion-v/nuxt'
+    '@nuxt/fonts'
   ],
 
   devtools: {
     enabled: true
   },
 
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/reset.css', '~/assets/css/main.css'],
+
+  runtimeConfig: {
+    imageProvider: process.env.IMAGE_PROVIDER
+  },
 
   compatibilityDate: '2024-11-01',
 
   nitro: {
     prerender: {
-      routes: [
-        '/'
-      ],
-      crawlLinks: true
+      routes: ['/'],
+      crawlLinks: true,
+      autoSubfolderIndex: false
     }
   },
 
@@ -33,6 +35,29 @@ export default defineNuxtConfig({
         commaDangle: 'never',
         braceStyle: '1tbs'
       }
+    }
+  },
+
+  fonts: {
+    defaults: {
+      weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      styles: ['normal', 'italic'],
+      subsets: [
+        'cyrillic-ext',
+        'cyrillic',
+        'greek-ext',
+        'greek',
+        'vietnamese',
+        'latin-ext',
+        'latin'
+      ]
+    },
+    families: [{ name: 'Inter', provider: 'fontsource' }]
+  },
+
+  image: {
+    cloudflare: {
+      baseURL: process.env.BASE_URL
     }
   }
 })
