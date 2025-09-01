@@ -4,7 +4,7 @@ definePageMeta({
 })
 
 const { data: page } = await useAsyncData(
-  'landing-page',
+  'landing',
   () => queryCollection('landing').first()
 )
 
@@ -62,7 +62,18 @@ const runtimeConfig = useRuntimeConfig()
             v-for="(technologie, technologieIndex) in experience.technologies"
             :key="technologieIndex"
           >
-            {{ technologie }}
+            <NuxtLink
+              v-if="technologies[technologie]"
+              :href="technologies[technologie].link"
+              target="_blank"
+              external
+            >
+              <Icon :name="technologies[technologie].icon" />
+              <span>{{ technologie }}</span>
+            </NuxtLink>
+            <p v-else>
+              {{ technologie }}
+            </p>
           </li>
         </ul>
       </article>
@@ -103,7 +114,18 @@ const runtimeConfig = useRuntimeConfig()
             v-for="(technologie, technologieIndex) in project.technologies"
             :key="technologieIndex"
           >
-            {{ technologie }}
+            <NuxtLink
+              v-if="technologies[technologie]"
+              :href="technologies[technologie].link"
+              target="_blank"
+              external
+            >
+              <Icon :name="technologies[technologie].icon" />
+              <span>{{ technologie }}</span>
+            </NuxtLink>
+            <p v-else>
+              {{ technologie }}
+            </p>
           </li>
         </ul>
       </article>
@@ -133,7 +155,7 @@ article {
   padding-inline: 1.2rem;
   padding-block: 1rem;
   box-sizing: border-box;
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
 
   h4 {
     font-size: 1rem;
@@ -161,7 +183,7 @@ article {
   }
 
   &:hover {
-    background-color: var(--color-deep-transparent);
+    background-color: var(--color-light-1);
   }
 }
 
@@ -186,7 +208,7 @@ section.projects article {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     background-color: var(--color-deep);
     border: 1px solid var(--color-light);
   }
@@ -196,17 +218,33 @@ ul.technologies {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.3rem;
   align-items: center;
 
-  li {
+  a,
+  p {
+    display: grid;
+    align-items: center;
     font-size: 0.8rem;
-    font-weight: 300;
-    border-radius: 10rem;
-    padding-inline: 0.7rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    font-variation-settings: 'wdth' 50;
+    border-radius: 0.2rem;
+    padding-inline: 0.5rem;
     padding-block: 0.35rem;
-    color: var(--color-light);
-    background-color: var(--color-deep);
+    color: var(--color);
+    background-color:  var(--color-light-2);
+  }
+
+  a {
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+    border: none;
+
+    &:hover {
+      color: var(--color-light);
+      background-color:  var(--color-light-3);
+    }
   }
 }
 

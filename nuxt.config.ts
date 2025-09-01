@@ -55,6 +55,13 @@ export default defineNuxtConfig({
     families: [{ name: 'Inter', provider: 'fontsource' }]
   },
 
+  icon: {
+    customCollections: [{
+      prefix: 'custom',
+      dir: './app/assets/icons'
+    }]
+  },
+
   image: {
     cloudflare: {
       baseURL: process.env.BASE_URL

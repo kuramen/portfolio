@@ -1,0 +1,70 @@
+<svg viewBox="0 0 660 660" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="c">
+      <path d="M396.855 462.508c-14.363 10.605-36.507 35.164-36.507 35.164l-28.102 29.336 7.488 7.531s23.032-22.64 28.801-28.414c5.77-5.77 15.707-16.305 31.137-27.11 10.738-7.515 31.36-16.663 44.996-1.792 10.3 11.23 5.418 24.097 5.418 24.097l11.023 9.903s18.121-25.594 5.79-45.024c-8.192-12.91-22.79-17.558-34.184-18.12a26.642 26.642 0 0 0-1.387-.032c-11.305 0-23.828 6.601-34.473 14.46"/>
+    </clipPath>
+    <clipPath id="e">
+      <path d="M215 432h247v111H215Zm0 0"/>
+    </clipPath>
+    <clipPath id="f">
+      <path d="M331.492 522.77c37.715 19.46 63.219 23.914 94.184 15.464 22.367-6.105 35.433-27.011 35.433-27.011l-11.023-9.903s-8.54 28.16-45.125 24.266c-19.832-2.11-35.621-7.648-64.34-28.316-32.879-23.66-54.059-58.329-54.059-58.329s-7.636 4.852-24.218 4.305c-18.219-.601-46.403-10.262-46.403-10.262s68.723 65.618 115.551 89.786"/>
+    </clipPath>
+    <clipPath id="h">
+      <path d="M211 519h246v110H211Zm0 0"/>
+    </clipPath>
+    <clipPath id="i">
+      <path d="M246.438 523.676c-22.368 6.101-35.43 27.008-35.43 27.008l11.02 9.902s8.542-28.16 45.128-24.266c19.832 2.11 35.617 7.649 64.34 28.317 32.875 23.66 54.059 58.328 54.059 58.328s7.636-4.852 24.218-4.305c18.22.602 46.403 10.262 46.403 10.262S387.453 563.3 340.62 539.137c-25.676-13.25-45.695-19.543-65.633-19.543-9.343 0-18.668 1.383-28.55 4.082"/>
+    </clipPath>
+    <clipPath id="k">
+      <path d="M200 527h140v87H200Zm0 0"/>
+    </clipPath>
+    <clipPath id="l">
+      <path d="M303.578 555.777c-5.77 5.774-15.703 16.313-31.137 27.114-10.734 7.515-31.355 16.664-44.996 1.793-10.297-11.23-5.418-24.098-5.418-24.098l-11.02-9.902s-18.12 25.593-5.792 45.023c8.191 12.906 22.793 17.559 34.187 18.121 11.664.57 24.778-6.25 35.86-14.43 14.36-10.601 36.504-35.164 36.504-35.164l27.968-29.695-7.488-7.531s-22.894 23-28.668 28.77"/>
+    </clipPath>
+    <linearGradient id="d" x1="-.669" x2="1.36" y1="0" y2="0" gradientTransform="rotate(45 -385.414 697.61) scale(81.368)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00adef"/>
+      <stop offset="1" stop-color="#3871c1"/>
+    </linearGradient>
+    <linearGradient id="g" x1="0" x2="1.103" y1="0" y2="0" gradientTransform="rotate(45 -343.42 506.734) scale(230.02)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00adef"/>
+      <stop offset="1" stop-color="#3871c1"/>
+    </linearGradient>
+    <linearGradient id="j" x1="-.09" x2="1" y1="0" y2="0" gradientTransform="rotate(45 -487.32 557.946) scale(230.02)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3871c1"/>
+      <stop offset="1" stop-color="#00adef"/>
+    </linearGradient>
+    <linearGradient id="m" x1="-.363" x2="1.672" y1="0" y2="0" gradientTransform="rotate(45 -519.616 546.467) scale(81.368)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3871c1"/>
+      <stop offset="1" stop-color="#00adef"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Wrapper pour centrer verticalement: (660 - 512.719)/2 = 73.6405 -->
+  <g transform="translate(0, 73.6405)">
+    <g clip-path="url(#c)" transform="matrix(2.42 0 0 2.42 -467.18 -1029.065)">
+      <path fill="url(#d)" d="M405.738 374.555 289 491.293l116.738 116.738 116.739-116.738Zm0 0"/>
+    </g>
+    <g clip-path="url(#e)" transform="matrix(2.42 0 0 2.42 -467.18 -1029.276)">
+      <g clip-path="url(#f)">
+        <path fill="url(#g)" d="M338.523 310.398 159.09 489.832l179.433 179.434 179.434-179.434Zm0 0"/>
+      </g>
+    </g>
+    <g clip-path="url(#h)" transform="matrix(2.42 0 0 2.42 -467.18 -1029.065)">
+      <g clip-path="url(#i)">
+        <path
+          fill="url(#j)"
+          d="M333.59 397.012 156.344 574.258l177.246 177.25 177.25-177.25Zm0 0"
+          clip-path="none"
+        />
+      </g>
+    </g>
+    <g clip-path="url(#k)" transform="matrix(2.42 0 0 2.42 -466.97 -1029.66)">
+      <g clip-path="url(#l)">
+        <path
+          fill="url(#m)"
+          d="M266.309 453.582 149.19 570.703l117.12 117.121 117.12-117.12Zm0 0"
+        />
+      </g>
+    </g>
+  </g>
+</svg>

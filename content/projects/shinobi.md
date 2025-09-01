@@ -9,7 +9,7 @@ description: |
   A unique NFT collection inspired by the Naruto universe, featuring custom shinobi characters and artwork.
 technologies:
   - "Vue"
-  - "Vue CLI"
+  - "Vite"
   - "Solidity"
   - "Oasis Emerald"
   - "Metamask"

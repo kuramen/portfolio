@@ -1,6 +1,9 @@
 :root {
   --background-color: #050505;
   --color-lighter: #fff;
+  --color-light-3: #8883;
+  --color-light-2: #8882;
+  --color-light-1: #8881;
   --color-light: #888;
   --color: #555;
   --color-deep: #222;

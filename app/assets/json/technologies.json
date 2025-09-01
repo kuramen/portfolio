@@ -1,0 +1,134 @@
+{
+  "Vue": {
+    "link": "https://vuejs.org",
+    "icon": "logos:vue"
+  },
+  "TypeScript": {
+    "link": "https://www.typescriptlang.org",
+    "icon": "logos:typescript-icon"
+  },
+  "HTML": {
+    "link": "https://developer.mozilla.org/docs/Web/HTML",
+    "icon": "logos:html-5"
+  },
+  "CSS": {
+    "link": "https://developer.mozilla.org/docs/Web/CSS",
+    "icon": "logos:css-3"
+  },
+  "Vitest": {
+    "link": "https://vitest.dev",
+    "icon": "logos:vitest"
+  },
+  "Playwright": {
+    "link": "https://playwright.dev",
+    "icon": "logos:playwright"
+  },
+  "Inertia.js": {
+    "link": "https://inertiajs.com",
+    "icon": "custom:inertia"
+  },
+  "Vite": {
+    "link": "https://vite.dev",
+    "icon": "logos:vitejs"
+  },
+  "fabric.js": {
+    "link": "https://fabricjs.com",
+    "icon": "custom:fabric"
+  },
+  "Highcharts": {
+    "link": "https://www.highcharts.com",
+    "icon": "logos:highcharts"
+  },
+  "Inkline": {
+    "link": "https://www.inkline.io",
+    "icon": "custom:inkline"
+  },
+  "Python": {
+    "link": "https://www.python.org",
+    "icon": "logos:python"
+  },
+  "Django": {
+    "link": "https://www.djangoproject.com",
+    "icon": "logos:django-icon"
+  },
+  "Postgres": {
+    "link": "https://www.postgresql.org",
+    "icon": "logos:postgresql"
+  },
+  "Docker": {
+    "link": "https://www.docker.com",
+    "icon": "logos:docker-icon"
+  },
+  "Kubernetes": {
+    "link": "https://kubernetes.io",
+    "icon": "logos:kubernetes"
+  },
+  "React": {
+    "link": "https://react.dev",
+    "icon": "logos:react"
+  },
+  "Angular": {
+    "link": "https://angular.dev",
+    "icon": "logos:angular-icon"
+  },
+  "Svelte": {
+    "link": "https://svelte.dev",
+    "icon": "logos:svelte-icon"
+  },
+  "Testcafe": {
+    "link": "https://testcafe.io",
+    "icon": "logos:testcafe"
+  },
+  "Cucumber": {
+    "link": "https://cucumber.io",
+    "icon": "logos:cucumber"
+  },
+  "Ansible": {
+    "link": "https://docs.ansible.com",
+    "icon": "logos:ansible"
+  },
+  "Podman": {
+    "link": "https://podman.io",
+    "icon": "custom:podman"
+  },
+  "Node.js": {
+    "link": "https://nodejs.org",
+    "icon": "logos:nodejs-icon-alt"
+  },
+  "MySQL": {
+    "link": "https://www.mysql.com",
+    "icon": "logos:mysql-icon"
+  },
+  "Astro": {
+    "link": "https://astro.build",
+    "icon": "logos:astro-icon"
+  },
+  "Solidity": {
+    "link": "https://soliditylang.org",
+    "icon": "logos:solidity"
+  },
+  "Oasis Emerald": {
+    "link": "https://docs.oasis.io/build/tools/other-paratimes/emerald",
+    "icon": "custom:oasis"
+  },
+  "Metamask": {
+    "link": "https://metamask.io",
+    "icon": "logos:metamask-icon"
+  },
+  "Pinia": {
+    "link": "https://pinia.vuejs.org",
+    "icon": "logos:pinia"
+  },
+  "Netlify": {
+    "link": "https://www.netlify.com",
+    "icon": "logos:netlify-icon"
+  },
+  "Cloudflare": {
+    "link": "https://www.cloudflare.com",
+    "icon": "logos:cloudflare-icon"
+  },
+  "Nginx": {
+    "link": "https://nginx.org",
+    "icon": "logos:nginx"
+  }
+}

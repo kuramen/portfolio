@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: page } = await useAsyncData(
-  'landing-page',
+  'landing',
   () => queryCollection('landing').first()
 )
 
@@ -27,7 +27,7 @@ const observerOptions = {
   threshold: [0, 0.1, 0.25, 0.5, 0.75, 1]
 }
 
-const intersectionRatios = reactive({
+const intersectionRatios = reactive<Record<string, number>>({
   about: 0,
   experience: 0,
   projects: 0
@@ -38,7 +38,7 @@ const activeNav = computed(() => {
   let intersectionRatio = 0
   for (const id in intersectionRatios) {
     const _intersectionRatio = intersectionRatios[id]
-    if (_intersectionRatio <= intersectionRatio) {
+    if (_intersectionRatio === undefined || _intersectionRatio <= intersectionRatio) {
       continue
     }
     key = id

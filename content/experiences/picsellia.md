@@ -8,7 +8,8 @@ description: |
 technologies:
   - "Vue"
   - "TypeScript"
-  - "HTML & CSS"
+  - "HTML"
+  - "CSS"
   - "Vitest"
   - "Playwright"
   - "Inertia.js"
@@ -16,8 +17,8 @@ technologies:
   - "fabric.js"
   - "Highcharts"
   - "Inkline"
+  - "Python"
   - "Django"
   - "Postgres"
   - "Docker"
-  - "Kubernetes"
 ---

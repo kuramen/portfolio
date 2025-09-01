@@ -9,7 +9,8 @@ description: |
 technologies:
   - "Vue"
   - "TypeScript"
-  - "HTML & CSS"
+  - "HTML"
+  - "CSS"
   - "Testcafe"
   - "Cucumber"
   - "React"
