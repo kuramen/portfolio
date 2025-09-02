@@ -1,8 +1,7 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData(
-  'landing',
-  () => queryCollection('landing').first()
-)
+import useLandingPage from '~/utils/useLandingPage'
+
+const { data: page } = await useLandingPage()
 
 const targets = ref<HTMLDivElement[]>([])
 
@@ -112,6 +111,9 @@ useIntersectionObserver(targets, onIntersection, observerOptions)
       </ul>
     </header>
     <slot />
+    <footer>
+      {{ page.footer }}
+    </footer>
   </div>
 </template>
 
@@ -119,13 +121,14 @@ useIntersectionObserver(targets, onIntersection, observerOptions)
 .container {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
+  grid-template-rows: auto auto;
   padding-inline: 3rem 1.8rem;
-  height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
 header {
+  grid-row: 1 / span 2;
   position: sticky;
   top: 0;
   display: grid;
@@ -169,6 +172,11 @@ nav > ul {
   grid-auto-flow: row;
   gap: 0;
   padding-block: 0 6rem;
+}
+
+footer {
+  padding-block: 0 6rem;
+  font-size: 0.8rem;
 }
 
 a {
@@ -238,6 +246,51 @@ nav li a {
 header > ul li {
   &:hover {
     color: var(--color-lighter);
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 4rem;
+    padding-inline: 3rem;
+  }
+
+  header {
+    position: relative;
+    height: fit-content;
+    min-height: unset;
+    padding-block: 4rem 0;
+  }
+
+  :slotted(main) {
+    padding-block: 0;
+  }
+
+  nav {
+    display: none;
+  }
+
+  footer {
+    padding-block: 0 4rem;
+  }
+}
+
+@media(max-width: 768px) {
+  .container {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 1.1rem;
   }
 }
 </style>

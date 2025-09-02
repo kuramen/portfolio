@@ -19,7 +19,8 @@ export default defineContentConfig({
           name: z.string(),
           url: z.string(),
           icon: z.string()
-        }))
+        })),
+        footer: z.string()
       })
     }),
     projects: defineCollection({

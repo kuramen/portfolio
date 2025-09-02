@@ -16,7 +16,9 @@ socials:
     url: "https://www.linkedin.com/in/clément-brunie/"
   - name: "Bluesky"
     icon: "ri:bluesky-fill"
-    url: "https://bsky.app/profile/kuramen.bsky.social"    
+    url: "https://bsky.app/profile/kuramen.bsky.social" 
+footer: |
+  Loosely coded in Zed by yours truly. Built with Nuxt, deployed with Cloudflare.
 ---
 
 ### About

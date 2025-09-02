@@ -1,12 +1,11 @@
 <script setup lang="ts">
+import useLandingPage from '~/utils/useLandingPage'
+
 definePageMeta({
   layout: 'landing'
 })
 
-const { data: page } = await useAsyncData(
-  'landing',
-  () => queryCollection('landing').first()
-)
+const { data: page } = await useLandingPage()
 
 const { data: experiences } = await useAsyncData(
   'experiences',
@@ -29,7 +28,7 @@ const runtimeConfig = useRuntimeConfig()
 </script>
 
 <template>
-  <main>
+  <main class="landing">
     <ContentRenderer
       v-if="page"
       id="about"
@@ -139,19 +138,15 @@ section {
   grid-template-rows: auto;
   grid-auto-rows: auto;
   grid-auto-flow: row;
-  grid-gap: 1rem;
+  gap: 1rem;
   padding-block: 6rem 0;
-}
-
-h3 {
-  display: none;
 }
 
 article {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: auto 1fr auto;
-  grid-gap: 1rem;
+  grid-template-rows: auto auto 1fr;
+  gap: 1rem;
   padding-inline: 1.2rem;
   padding-block: 1rem;
   box-sizing: border-box;
@@ -182,6 +177,11 @@ article {
     grid-row: 1 / span 3;
   }
 
+  .technologies {
+    height: fit-content;
+    justify-self: start;
+  }
+
   &:hover {
     background-color: var(--color-light-1);
   }
@@ -196,10 +196,6 @@ section.about {
     line-height: 1.6em;
     font-weight: 400;
     height: fit-content;
-  }
-
-  :global(h3) {
-    display: none;
   }
 }
 
@@ -254,6 +250,8 @@ ul.technologies {
   gap: 0.5rem;
   border: none;
   cursor: pointer;
+  margin-block-start: 2rem;
+  padding-inline-start: 1.2rem;
 
   span:not(.iconify) {
     display: block;
@@ -262,6 +260,85 @@ ul.technologies {
 
   &:hover {
     color: var(--color);
+  }
+}
+
+@media (max-width: 1024px) {
+  section {
+    padding-block: 0;
+    padding-inline: 0 !important;
+
+    &:not(.projects):after {
+      content: '';
+      display: block;
+      height: 4rem;
+    }
+  }
+
+  article {
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+  }
+
+  .resume-link {
+    padding-inline-start: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  section.experience article {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+
+    aside {
+      grid-row: 1;
+      height: fit-content;
+      margin-block-end: -0.5rem;
+    }
+  }
+
+  section.projects article {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto;
+
+    aside {
+      grid-row: 4;
+      height: fit-content;
+
+      img {
+        width: auto;
+        height: 100%;
+        max-height: 8rem;
+      }
+    }
+  }
+}
+</style>
+
+<style>
+main.landing h3 {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  main.landing h3 {
+    display: block;
+    position: sticky;
+    top: 0;
+    border: none;
+    color: var(--color-lighter);
+    background-color: var(--background-color-transparent);
+    padding-block: 1rem;
+    margin-inline: -3rem;
+    padding-inline: 3rem;
+    backdrop-filter: blur(8px);
+  }
+}
+
+@media(max-width: 768px) {
+  main.landing h3 {
+    margin-inline: -1.5rem;
+    padding-inline: 1.5rem;
   }
 }
 </style>

@@ -1,4 +1,5 @@
 :root {
+  --background-color-transparent: #05050566;
   --background-color: #050505;
   --color-lighter: #fff;
   --color-light-3: #8883;
@@ -22,6 +23,7 @@ body,
   font-family: "Inter", sans-serif;
   background-color: var(--background-color);
   color: var(--color);
+  overflow: hidden;
 }
 
 h1,

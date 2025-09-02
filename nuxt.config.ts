@@ -15,6 +15,16 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/reset.css', '~/assets/css/main.css'],
 
+  content: {
+    renderer: {
+      anchorLinks: false
+    },
+    database: {
+      type: 'd1',
+      bindingName: 'portfolio'
+    }
+  },
+
   runtimeConfig: {
     imageProvider: process.env.IMAGE_PROVIDER
   },
@@ -43,11 +53,6 @@ export default defineNuxtConfig({
       weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
       styles: ['normal', 'italic'],
       subsets: [
-        'cyrillic-ext',
-        'cyrillic',
-        'greek-ext',
-        'greek',
-        'vietnamese',
         'latin-ext',
         'latin'
       ]
