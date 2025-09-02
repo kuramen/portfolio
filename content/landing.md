@@ -7,6 +7,7 @@ fullname: "Clément Brunie"
 title: "Front Engineer"
 description: "I build scalable, high-performance web applications."
 resume: "/clement-brunie-resume.pdf"
+link: "https://github.com/kuramen/portfolio"
 socials:
   - name: "GitHub"
     icon: "ri:github-fill"
@@ -16,9 +17,7 @@ socials:
     url: "https://www.linkedin.com/in/clément-brunie/"
   - name: "Bluesky"
     icon: "ri:bluesky-fill"
-    url: "https://bsky.app/profile/kuramen.bsky.social" 
-footer: |
-  Loosely coded in Zed by yours truly. Built with Nuxt, deployed with Cloudflare.
+    url: "https://bsky.app/profile/kuramen.bsky.social"  
 ---
 
 ### About

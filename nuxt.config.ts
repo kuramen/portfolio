@@ -1,3 +1,5 @@
+import type { D1DatabaseConfig } from '@nuxt/content'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
@@ -19,10 +21,12 @@ export default defineNuxtConfig({
     renderer: {
       anchorLinks: false
     },
-    database: {
-      type: 'd1',
-      bindingName: 'portfolio'
-    }
+    database: process.env.NODE_ENV === 'production'
+      ? {
+          type: 'd1',
+          bindingName: process.env.CONTENT_DATABASE_BINDING
+        } as D1DatabaseConfig
+      : undefined
   },
 
   runtimeConfig: {
@@ -50,12 +54,9 @@ export default defineNuxtConfig({
 
   fonts: {
     defaults: {
-      weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-      styles: ['normal', 'italic'],
-      subsets: [
-        'latin-ext',
-        'latin'
-      ]
+      weights: [300, 400, 500, 600, 700],
+      styles: ['normal'],
+      subsets: ['latin-ext', 'latin']
     },
     families: [{ name: 'Inter', provider: 'fontsource' }]
   },

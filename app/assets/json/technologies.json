@@ -3,6 +3,10 @@
     "link": "https://vuejs.org",
     "icon": "logos:vue"
   },
+  "Nuxt": {
+    "link": "https://nuxt.com",
+    "icon": "logos:nuxt-icon"
+  },
   "TypeScript": {
     "link": "https://www.typescriptlang.org",
     "icon": "logos:typescript-icon"

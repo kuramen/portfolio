@@ -1,0 +1,1 @@
+Loosely built with [Nuxt](https://nuxt.com) and coded in [Zed](https://zed.dev) by yours truly. Deployed with [Cloudflare](https://www.cloudflare.com), open sourced on [Github](https://github.com/kuramen/portfolio).

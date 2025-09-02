@@ -3,6 +3,11 @@ import useLandingPage from '~/utils/useLandingPage'
 
 const { data: page } = await useLandingPage()
 
+const { data: footer } = await useAsyncData(
+  'footer',
+  () => queryCollection('footer').first()
+)
+
 const targets = ref<HTMLDivElement[]>([])
 
 onMounted(() => {
@@ -59,7 +64,7 @@ useIntersectionObserver(targets, onIntersection, observerOptions)
 <template>
   <div
     v-if="page"
-    class="container"
+    class="container landing"
   >
     <header>
       <h1>
@@ -111,9 +116,11 @@ useIntersectionObserver(targets, onIntersection, observerOptions)
       </ul>
     </header>
     <slot />
-    <footer>
-      {{ page.footer }}
-    </footer>
+    <ContentRenderer
+      v-if="footer"
+      :value="footer"
+      tag="footer"
+    />
   </div>
 </template>
 
@@ -172,11 +179,6 @@ nav > ul {
   grid-auto-flow: row;
   gap: 0;
   padding-block: 0 6rem;
-}
-
-footer {
-  padding-block: 0 6rem;
-  font-size: 0.8rem;
 }
 
 a {
@@ -271,10 +273,6 @@ header > ul li {
   nav {
     display: none;
   }
-
-  footer {
-    padding-block: 0 4rem;
-  }
 }
 
 @media(max-width: 768px) {
@@ -291,6 +289,25 @@ header > ul li {
 
   h2 {
     font-size: 1.1rem;
+  }
+}
+</style>
+
+<style>
+.container.landing footer {
+  padding-block: 0 6rem;
+
+  p {
+    font-size: 0.8rem;
+    display: block;
+    line-height: 1.6em;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container.landing footer {
+    padding-block: 0 4rem;
   }
 }
 </style>

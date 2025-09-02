@@ -1,36 +1,42 @@
-# Nuxt Portfolio Template
+# Clément Brunie - Portfolio
 
-[![Nuxt UI Pro](https://img.shields.io/badge/Made%20with-Nuxt%20UI%20Pro-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com/pro)
-[![Deploy to NuxtHub](https://img.shields.io/badge/Deploy%20to-NuxtHub-00DC82?logo=nuxt&labelColor=020420)](https://hub.nuxt.com/new?repo=nuxt-ui-pro/portfolio)
+[![Built with Nuxt](https://img.shields.io/badge/Built%20with-Nuxt%204-00DC82?logo=nuxt&labelColor=020420)](https://nuxt.com)
+[![Vue 3](https://img.shields.io/badge/Vue-3-4FC08D?logo=vue.js&labelColor=2D3748)](https://vuejs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?logo=typescript&labelColor=2D3748)](https://typescriptlang.org)
 
-Use this template to create your own portfolio with [Nuxt UI Pro](https://ui.nuxt.com/pro).
+Personal portfolio showcasing my work as a Frontend Engineer specializing in Vue.js ecosystem.
 
-- [Live demo](https://portfolio-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/getting-started/installation/pro/nuxt)
+- **Live site:** [clement-brunie.me](https://clement-brunie.me)
 
-<a href="https://portfolio-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3BvcnRmb2xpby10ZW1wbGF0ZS5udXh0LmRldiIsImlhdCI6MTc0NTkzNDczMX0.XDWnQoyVy3XVtKQD6PLQ8RFUwr4yr1QnVwPxRrjCrro.jpg?theme=dark">
-    <source media="(prefers-color-scheme: light)" srcset="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3BvcnRmb2xpby10ZW1wbGF0ZS5udXh0LmRldiIsImlhdCI6MTc0NTkzNDczMX0.XDWnQoyVy3XVtKQD6PLQ8RFUwr4yr1QnVwPxRrjCrro.jpg?theme=light">
-    <img alt="Nuxt Portfolio Template" src="https://assets.hub.nuxt.com/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3BvcnRmb2xpby10ZW1wbGF0ZS5udXh0LmRldiIsImlhdCI6MTc0NTkzNDczMX0.XDWnQoyVy3XVtKQD6PLQ8RFUwr4yr1QnVwPxRrjCrro.jpg">
-  </picture>
-</a>
+## ✨ Features
 
-## Quick Start
+- **🎨 Modern Design** - Clean, responsive interface built with modern web standards
+- **⚡ Performance Optimized** - Built with Nuxt 4 for optimal loading times
+- **📱 Mobile First** - Fully responsive design that works on all devices
+- **🎯 Interactive Navigation** - Smooth scroll with active section detection
+- **📊 Dynamic Content** - Powered by Nuxt Content for easy updates
+- **🎪 Smooth Animations** - Enhanced user experience with subtle transitions
+- **🔧 Type Safe** - Fully written in TypeScript for better development experience
 
-```bash [Terminal]
-npx nuxi init -t github:nuxt-ui-pro/portfolio
-```
+## 🛠️ Tech Stack
 
-## Setup
+- **Framework:** [Nuxt 4](https://nuxt.com) with Vue 3 Composition API
+- **Language:** [TypeScript](https://typescriptlang.org) for type safety
+- **Content:** [Nuxt Content](https://content.nuxt.com) for markdown-based content management
+- **Styling:** Custom CSS with modern design principles
+- **Icons:** [Nuxt Icon](https://nuxt.com/modules/icon) with Iconify
+- **Images:** [Nuxt Image](https://image.nuxt.com) for optimized image handling
+- **Fonts:** [Nuxt Fonts](https://fonts.nuxt.com) with Inter font family
+- **Utilities:** [VueUse](https://vueuse.org) for composition utilities
+- **Code Quality:** ESLint with custom configuration
 
-Make sure to install the dependencies:
+## 🔧 Development
+
+Install dependencies:
 
 ```bash
 pnpm install
 ```
-
-## Development Server
 
 Start the development server on `http://localhost:3000`:
 
@@ -38,7 +44,7 @@ Start the development server on `http://localhost:3000`:
 pnpm dev
 ```
 
-## Production
+## 🏗️ Production
 
 Build the application for production:
 
@@ -46,14 +52,29 @@ Build the application for production:
 pnpm build
 ```
 
-Locally preview production build:
+Preview production build:
 
 ```bash
 pnpm preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## 🔍 Code Quality
 
-## Renovate integration
+```bash
+# Lint code
+pnpm lint
 
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
+# Fix linting issues
+pnpm lint:fix
+
+# Type checking
+pnpm typecheck
+```
+
+## 📄 License
+
+This project is my personal portfolio. Feel free to use it as inspiration for your own portfolio.
+
+---
+
+**Built with ❤️ by Clément Brunie**

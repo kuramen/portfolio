@@ -19,9 +19,12 @@ export default defineContentConfig({
           name: z.string(),
           url: z.string(),
           icon: z.string()
-        })),
-        footer: z.string()
+        }))
       })
+    }),
+    footer: defineCollection({
+      type: 'page',
+      source: 'footer.md'
     }),
     projects: defineCollection({
       type: 'data',

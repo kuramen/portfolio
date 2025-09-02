@@ -22,11 +22,11 @@
     "@nuxt/icon": "^2.0.0",
     "@nuxt/image": "^1.11.0",
     "@vueuse/nuxt": "^13.7.0",
-    "better-sqlite3": "^12.2.0",
     "nuxt": "^4.0.3"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.9.0",
+    "better-sqlite3": "^12.2.0",
     "eslint": "^9.34.0",
     "typescript": "^5.9.2",
     "vue-tsc": "^3.0.6",
@@ -47,5 +47,5 @@
       "unrs-resolver"
     ]
   },
-  "packageManager": "pnpm@10.15.0"
+  "packageManager": "pnpm@10.15.1"
 }
