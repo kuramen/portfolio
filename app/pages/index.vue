@@ -331,6 +331,7 @@ main.landing h3 {
     padding-block: 1rem;
     margin-inline: -3rem;
     padding-inline: 3rem;
+    z-index: 1;
     backdrop-filter: blur(8px);
   }
 }

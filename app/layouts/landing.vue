@@ -132,6 +132,7 @@ useIntersectionObserver(targets, onIntersection, observerOptions)
   padding-inline: 3rem 1.8rem;
   overflow-y: auto;
   overflow-x: hidden;
+  scrollbar-gutter: stable;
 }
 
 header {
@@ -296,6 +297,7 @@ header > ul li {
 <style>
 .container.landing footer {
   padding-block: 0 6rem;
+  max-width: 19rem;
 
   p {
     font-size: 0.8rem;
