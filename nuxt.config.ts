@@ -1,6 +1,5 @@
 import type { D1DatabaseConfig } from '@nuxt/content'
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
@@ -21,16 +20,18 @@ export default defineNuxtConfig({
     renderer: {
       anchorLinks: false
     },
-    database: process.env.NODE_ENV === 'production'
+    database: process.env.CONTENT_DATABASE_CLOUDFLARE_BINDING
       ? {
           type: 'd1',
-          bindingName: process.env.CONTENT_DATABASE_BINDING
+          bindingName: process.env.CONTENT_DATABASE_CLOUDFLARE_BINDING
         } as D1DatabaseConfig
       : undefined
   },
 
   runtimeConfig: {
-    imageProvider: process.env.IMAGE_PROVIDER
+    public: {
+      imageProvider: process.env.IMAGE_PROVIDER
+    }
   },
 
   compatibilityDate: '2024-11-01',
@@ -66,11 +67,5 @@ export default defineNuxtConfig({
       prefix: 'custom',
       dir: './app/assets/icons'
     }]
-  },
-
-  image: {
-    cloudflare: {
-      baseURL: process.env.BASE_URL
-    }
   }
 })
