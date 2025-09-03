@@ -10,6 +10,8 @@ description: |
 technologies:
   - "Vue"
   - "Astro"
+  - "Python"
+  - "Postgres"
   - "Django"
   - "Inertia.js"
   - "Vite"
