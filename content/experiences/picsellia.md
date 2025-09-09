@@ -21,4 +21,5 @@ technologies:
   - "Django"
   - "Postgres"
   - "Docker"
+  - "Github"
 ---

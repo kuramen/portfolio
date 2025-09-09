@@ -15,6 +15,7 @@ export default defineContentConfig({
         title: z.string(),
         description: z.string(),
         resume: z.string().url(),
+        projectLimit: z.number().min(1),
         socials: z.array(z.object({
           name: z.string(),
           url: z.string(),
@@ -34,7 +35,11 @@ export default defineContentConfig({
         description: z.string().nonempty(),
         image: createImageSchema(),
         technologies: z.array(z.string()),
-        date: z.date()
+        date: z.date(),
+        link: z.string().url().optional(),
+        repo: z.string().url().optional(),
+        madeAt: z.string().optional(),
+        landing: z.boolean()
       })
     }),
     experiences: defineCollection({

@@ -1,7 +1,9 @@
 ---
 title: "Advent of Dingbat"
 date: "2023"
-link: "https://dingbat-advent.com/auth/login"
+link: "https://dingbat-advent.com"
+repo: "https://github.com/Kurami-Lab/dingbat"
+landing: true
 image: 
   src: "img/dingbat.png"
   alt: "Advent of Dingbat"
@@ -17,4 +19,5 @@ technologies:
   - "Vite"
   - "Docker"
   - "Nginx"
+  - "Github"
 ---

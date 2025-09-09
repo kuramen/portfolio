@@ -11,4 +11,5 @@ technologies:
   - "Node.js"
   - "TypeScript"
   - "MySQL"
+  - "Tortoise SVN"
 ---

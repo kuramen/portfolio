@@ -8,6 +8,7 @@ title: "Front Engineer"
 description: "I build scalable, high-performance web applications."
 resume: "/clement-brunie-resume.pdf"
 link: "https://github.com/kuramen/portfolio"
+projectLimit: 4
 socials:
   - name: "GitHub"
     icon: "ri:github-fill"

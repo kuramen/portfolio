@@ -134,5 +134,21 @@
   "Nginx": {
     "link": "https://nginx.org",
     "icon": "logos:nginx"
+  },
+  "Pinata": {
+    "link": "https://pinata.cloud",
+    "icon": "custom:pinata"
+  },
+  "Github": {
+    "link": "https://github.com",
+    "icon": "logos:github-icon"
+  },
+  "Gitlab": {
+    "link": "https://gitlab.com",
+    "icon": "logos:gitlab-icon"
+  },
+  "Tortoise SVN": {
+    "link": "https://tortoisesvn.net",
+    "icon": "custom:tortoise-svn"
   }
 }

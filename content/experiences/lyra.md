@@ -18,4 +18,5 @@ technologies:
   - "Svelte"
   - "Ansible"
   - "Podman"
+  - "Gitlab"
 ---

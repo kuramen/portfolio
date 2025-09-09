@@ -15,12 +15,24 @@ const { data: footer } = await useAsyncData(
 
 const { data: experiences } = await useAsyncData(
   'experiences',
-  () => queryCollection('experiences').order('startDate', 'DESC').all()
+  () => queryCollection('experiences')
+    .order('startDate', 'DESC')
+    .all()
 )
 
-const { data: projects } = await useAsyncData(
-  'projects',
-  () => queryCollection('projects').order('date', 'DESC').all()
+const { data: _projects } = await useAsyncData(
+  'preview-projects',
+  () => queryCollection('projects')
+    .where('landing', '=', true)
+    .order('date', 'DESC')
+    .limit(page.value.projectLimit + 1)
+    .all()
+)
+
+const hasMoreProjects = computed(() => (_projects.value?.length ?? 0) > page.value.projectLimit)
+const projects = computed(() => hasMoreProjects.value
+  ? _projects.value?.slice(0, page.value.projectLimit)
+  : _projects.value
 )
 
 useSeoMeta({
@@ -191,7 +203,7 @@ useIntersectionObserver($targets, onIntersection, observerOptions)
         <NuxtLink
           v-if="page"
           :to="page.resume"
-          class="resume-link"
+          class="more-link"
           target="_blank"
           external
         >
@@ -240,6 +252,14 @@ useIntersectionObserver($targets, onIntersection, observerOptions)
             </li>
           </ul>
         </article>
+        <NuxtLink
+          v-if="hasMoreProjects"
+          to="/projects"
+          class="more-link"
+        >
+          <span>View Full Project Archive</span>
+          <Icon name="ri:arrow-right-line" />
+        </NuxtLink>
       </section>
     </main>
     <ContentRenderer
@@ -456,41 +476,7 @@ section.projects article {
   }
 }
 
-ul.technologies {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-  align-items: center;
-
-  a,
-  p {
-    display: grid;
-    align-items: center;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: -0.5px;
-    font-variation-settings: 'wdth' 50;
-    border-radius: 0.2rem;
-    padding-inline: 0.5rem;
-    padding-block: 0.35rem;
-    color: var(--color);
-    background-color:  var(--color-light-2);
-  }
-
-  a {
-    grid-template-columns: auto 1fr;
-    gap: 0.5rem;
-    border: none;
-
-    &:hover {
-      color: var(--color-light);
-      background-color:  var(--color-light-3);
-    }
-  }
-}
-
-.resume-link {
+.more-link {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -550,7 +536,7 @@ ul.technologies {
     padding-inline: 1rem;
   }
 
-  .resume-link {
+  .more-link {
     padding-inline-start: var(--padding-inline);
   }
 }
@@ -636,7 +622,8 @@ main.landing h3 {
     color: var(--color-lighter);
     background-color: var(--background-color-transparent);
     padding-block: 1rem;
-    padding-inline: var(--padding-inline);
+    margin-inline: 0.5rem;
+    padding-inline: calc(var(--padding-inline) - 0.5rem);
     z-index: 1;
     backdrop-filter: blur(8px);
   }

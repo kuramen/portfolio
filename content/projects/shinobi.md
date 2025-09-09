@@ -1,7 +1,8 @@
 ---
 title: "Shinobi NFT"
 date: "2020"
-link: "https://github.com/kuramen/shinobi"
+repo: "https://github.com/kuramen/shinobi"
+landing: true
 image:
   src: "img/shinobi-nft.png" 
   alt: "Shinobi NFT"
@@ -14,5 +15,7 @@ technologies:
   - "Oasis Emerald"
   - "Metamask"
   - "Pinia"
+  - "Pinata"
   - "Netlify"
+  - "Github"
 ---
