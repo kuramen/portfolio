@@ -14,11 +14,18 @@ export default defineNuxtConfig({
     enabled: true
   },
 
-  css: ['~/assets/css/reset.css', '~/assets/css/main.css'],
+  css: ['~/assets/css/reset.css', '~/assets/css/main.css', '~/assets/css/markdown.css'],
 
   content: {
     renderer: {
       anchorLinks: false
+    },
+    build: {
+      markdown: {
+        toc: {
+          depth: 3
+        }
+      }
     },
     database: process.env.CONTENT_DATABASE_CLOUDFLARE_BINDING
       ? {
@@ -26,12 +33,6 @@ export default defineNuxtConfig({
           bindingName: process.env.CONTENT_DATABASE_CLOUDFLARE_BINDING
         } as D1DatabaseConfig
       : undefined
-  },
-
-  runtimeConfig: {
-    public: {
-      imageProvider: process.env.IMAGE_PROVIDER
-    }
   },
 
   compatibilityDate: '2024-11-01',

@@ -1,8 +1,4 @@
 <script setup lang="ts">
-definePageMeta({
-  layout: false
-})
-
 const { data: page } = await useAsyncData(
   'landing',
   () => queryCollection('landing').first()
@@ -23,7 +19,7 @@ const { data: experiences } = await useAsyncData(
 const { data: _projects } = await useAsyncData(
   'preview-projects',
   () => queryCollection('projects')
-    .where('landing', '=', true)
+    .where('preview', 'IS NOT NULL')
     .order('date', 'DESC')
     .limit(page.value.projectLimit + 1)
     .all()
@@ -72,7 +68,7 @@ const intersectionRatios = reactive<Record<string, number>>({
   projects: 0
 })
 
-const activeNav = computed(() => {
+const activeNav = computed((oldKey) => {
   let key = 'about'
   let intersectionRatio = 0
   for (const id in intersectionRatios) {
@@ -82,6 +78,9 @@ const activeNav = computed(() => {
     }
     key = id
     intersectionRatio = _intersectionRatio
+  }
+  if (key === oldKey) {
+    return oldKey
   }
   return key
 })
@@ -225,13 +224,13 @@ useIntersectionObserver($targets, onIntersection, observerOptions)
         >
           <aside>
             <NuxtImg
-              :src="project.image.src"
-              :alt="project.image.alt"
+              :src="project.preview.image.src"
+              :alt="project.preview.image.alt"
               width="200"
             />
           </aside>
           <h4>{{ project.title }}</h4>
-          <p>{{ project.description }}</p>
+          <p>{{ project.preview.description }}</p>
           <ul class="technologies">
             <li
               v-for="(technologie, technologieIndex) in project.technologies"

@@ -1,8 +1,4 @@
 <script setup>
-definePageMeta({
-  layout: false
-})
-
 const { data: projects } = await useAsyncData(
   'projects',
   () => queryCollection('projects').order('date', 'DESC').all()
@@ -12,10 +8,10 @@ const { data: projects } = await useAsyncData(
 <template>
   <div class="container projects">
     <header>
-      <NuxtLink to="/">
+      <p class="breadcrumb">
         <Icon name="ri:arrow-left-line" />
-        <span>Clément Brunie</span>
-      </NuxtLink>
+        <NuxtLink to="/">Clément Brunie</NuxtLink>
+      </p>
       <h1>All Projects</h1>
     </header>
     <main v-if="projects">
@@ -69,7 +65,10 @@ const { data: projects } = await useAsyncData(
                     target="_blank"
                     external
                   >
-                    <Icon :name="technologies[technologie].icon" />
+                    <Icon
+                      v-if="technologies[technologie].icon"
+                      :name="technologies[technologie].icon"
+                    />
                     <span>{{ technologie }}</span>
                   </NuxtLink>
                   <p v-else>
@@ -127,16 +126,6 @@ header {
   grid-template-rows: auto 1fr;
   gap: 0.5rem;
   padding-block-start: 6rem;
-
-  a {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.5rem;
-    align-items: center;
-    border: none;
-    width: fit-content;
-    color: var(--color-light);
-  }
 
   h1 {
     color: var(--color-lighter);

@@ -75,13 +75,35 @@ ul.technologies {
   }
 
   a {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto;
+    grid-auto-columns: auto;
+    grid-auto-flow: column;
     gap: 0.5rem;
     border: none;
 
     &:hover {
       color: var(--color-light);
       background-color: var(--color-light-3);
+    }
+  }
+}
+
+.breadcrumb {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  gap: 0.5rem;
+  align-items: center;
+  width: fit-content;
+
+  a {
+    border: none;
+    width: fit-content;
+    color: var(--color-light);
+
+    &:hover {
+      color: var(--color-lighter);
     }
   }
 }

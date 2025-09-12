@@ -28,14 +28,16 @@ export default defineContentConfig({
       source: 'footer.md'
     }),
     projects: defineCollection({
-      type: 'data',
+      type: 'page',
       source: 'projects/*.md',
       schema: z.object({
         title: z.string().nonempty(),
-        description: z.string().nonempty(),
-        image: createImageSchema(),
         technologies: z.array(z.string()),
         date: z.date(),
+        preview: z.object({
+          description: z.string().nonempty(),
+          image: createImageSchema()
+        }).optional(),
         link: z.string().url().optional(),
         repo: z.string().url().optional(),
         madeAt: z.string().optional(),
@@ -43,7 +45,7 @@ export default defineContentConfig({
       })
     }),
     experiences: defineCollection({
-      type: 'data',
+      type: 'page',
       source: 'experiences/*.md',
       schema: z.object({
         position: z.string().nonempty(),
