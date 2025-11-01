@@ -16,9 +16,6 @@ socials:
   - name: "LinkedIn"
     icon: "ri:linkedin-box-fill"
     url: "https://www.linkedin.com/in/clément-brunie/"
-  - name: "Bluesky"
-    icon: "ri:bluesky-fill"
-    url: "https://bsky.app/profile/kuramen.bsky.social"  
 ---
 
 ### About
