@@ -15,7 +15,7 @@ socials:
     url: "https://github.com/kuramen"
   - name: "LinkedIn"
     icon: "ri:linkedin-box-fill"
-    url: "https://www.linkedin.com/in/clément-brunie/"
+    url: "https://www.linkedin.com/in/clement-brunie/"
   - name: "Mail"
     icon: "ri:mail-fill"
     url: "mailto:contact@clement-brunie.me"
