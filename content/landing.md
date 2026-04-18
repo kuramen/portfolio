@@ -1,5 +1,5 @@
 ---
-seo: 
+seo:
   title: Clément Brunie
   description: |
     Lead Frontend Engineer passionate about building scalable, high-performance interfaces that merge technical excellence with exceptional user experiences. Specializing in Vue.js and TypeScript across MLOps, fintech, and space technology.
@@ -16,6 +16,9 @@ socials:
   - name: "LinkedIn"
     icon: "ri:linkedin-box-fill"
     url: "https://www.linkedin.com/in/clément-brunie/"
+  - name: "Mail"
+    icon: "ri:mail-fill"
+    url: "mailto:contact@clement-brunie.me"
 ---
 
 ### About
